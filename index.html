@@ -1,0 +1,53 @@
+<!DOCTYPE html> <!-- Deklarace dokumentu na HTML 5 a novejší -->
+<html lang="cs"> <!-- Základ stránky HTML a atrubut pro nastavení jazyka -->
+<head> <!-- Metadata o stránce -->
+    <meta charset="UTF-8"> <!-- Kódové znaky, díky němu umí české písmenka -->
+    <!-- Nastavení přizpůsobení elementů vůči šířce prohlížeče -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Můje stránka</title>
+
+    <!-- Odkazování na soubory pomocí "/" má přístup k souborům mimo svoje potomky -->
+    <link rel="stylesheet" href="/style/style.css"> 
+
+    <!-- Odkazování bez "/" na začátku má přístůp jen ke adresářům ve svém řádů nebo níže -->
+    <script src="script/script.js"></script>
+</head>
+<body> <!-- Tělo stránky, to co vidí uživatel a co mi hlavně programujeme -->
+    <header> <!-- Hlavička stránky -->
+        <a href="/login/login.html">Odkaz na login</a>  <!-- Odkaz na jinou stránku, na odkaz se používá href! -->
+        <a href="https://www.w3schools.com/html/default.asp">Odkaz na jinou stránkum než naší</a> <!-- Odkaz na na jinou stránku -->
+    </header>
+    <main> <!-- Hlavní content stránky -->
+        <!-- Class - Třída, můžeme využívat jednu třídu pro více elementů, upravujeme pak v CSS -->
+        <div class="Hero"> <!-- Oddíl pro jiné elementy, lépe se pak upravuje přes CSS -->
+            <div id="Title"> <!-- ID - Jediněčný identifikátor, často propojujeme s JS, můžeme upravovat i v CSS, je nadřazená Classe -->
+                <h1>Galérie</h1> <!-- Nadpis, číslo značí úroveň nadpisu -->
+            </div>
+            <div class="odsazeni>
+                <img src="" alt="Alternativní text" id="Img"> <!-- Obrázek, můžeme odkazovat v souboru jako u linku, nebo můžeme použít odkaz z internetu -->
+            </div>
+            <div class="odsazeni">
+                <label for="Search">Vyhledej</label> <!-- Popisek k inputu, for nám říká pro koho má být -->
+                <input type="text" name="Search"> <!-- Nepárový tag, takzvaně vstup, který voláme v JS pomocí .value -->
+                <!-- type je atribut, kde měníme vlastnost inputu
+                    Příklad: password - heslo
+                             range - osa pro nastavování hodnot
+                             color - paleta barev
+                    Odkaz máte: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+                -->
+                <button onclick="Change()">Změň</button>
+            </div>
+            <div class="buttons odsazeni"> <!-- Můžeme dávat více classu pro element -->
+                <!-- onclick je event (událost), která volá funkci z js a při kliknutí ji pouští -->
+                <button onclick="">Náhodný obrázek</button> <!-- Tlačítko -->
+                <button onclick="">Obrázek 1</button>
+                <button onclick="">Obrázek 2</button>
+                <button onclick="">Obrázek 3</button>
+            </div>
+        </div>
+    </main>
+    <footer> <!-- Patička stránky -->
+
+    </footer>
+</body>
+</html>
