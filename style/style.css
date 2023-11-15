@@ -1,0 +1,50 @@
+body{ /* Můžeme odkazovat jen na element */
+    margin: 0; /* Vnější ohraničení */
+    background-color:ghostwhite; /* Barva pozadí */
+    font-family: Arial, Helvetica, sans-serif; /* Font pro celou stránku */
+}
+
+header{
+    background-color: greenyellow;
+    padding: 10px; /* Vnitřní odsazení */
+    display: flex; /* Pokročilé pozicování pomocí Flex, vytvoří nám container */
+    justify-content: flex-end; /* Pokud máme display flex, můžemeho pozicovat na "konec" neboli na pravou stranu */
+    gap: 16px; /* Odsazeni pro itemy, které se nacházi v containeru */
+}
+
+header a{
+    text-align: center; /* Zarovná pouze text na na střed */
+    color: black; /* Nastavuje barvu písma */
+    text-decoration: none; /* Nastavuje decoraci na text (underline), zde none vypína */
+    font-weight: bold; /* Tloušťka textu v px nebo přímo příkaz */
+}
+
+main{
+    padding: 5px;
+}
+
+/* Odkazování na classu píšeme tečku pred název třídy, je nadřazená vůči nastavení elementu */
+.Hero{ 
+    background-color: blue;
+    color: white;
+    margin: auto; /* Nastavuje element tak, že z každe strany vypočítáva px, aby byl na středu */
+    padding: 10px;
+    max-width: 600px; /* Maximální šířka elementu */
+}
+.odsazeni{
+    display: flex;
+    justify-content: center; /* Pokud máme display flex, nastaví nám itemy po ose x */
+    align-items: center; /* Pokud máme display flex, nastaví nám itemy na center po ose y */
+    flex-direction: row; /* Tok itemů v řadě, column je pod sebou */
+    gap: 10px;
+    margin: 10px 0; /* 10px pro horní a dolní, 0 pro levý a pravý */
+}
+
+#Title{
+    display: flex;
+    justify-content: center;
+}
+img{
+    width: 100%; /* Nastaví 100% velikoz, která se přizpůsobí rodiči */
+    object-fit: cover; /* Přizpůsobí obrázek, aby nedošlo k deformaci */
+}
