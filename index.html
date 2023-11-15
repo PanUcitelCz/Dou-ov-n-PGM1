@@ -28,7 +28,7 @@
             </div>
             <div class="odsazeni">
                 <label for="Search">Vyhledej</label> <!-- Popisek k inputu, for nám říká pro koho má být -->
-                <input type="text" name="Search"> <!-- Nepárový tag, takzvaně vstup, který voláme v JS pomocí .value -->
+                <input type="text" name="Search" id="vstup"> <!-- Nepárový tag, takzvaně vstup, který voláme v JS pomocí .value -->
                 <!-- type je atribut, kde měníme vlastnost inputu
                     Příklad: password - heslo
                              range - osa pro nastavování hodnot
@@ -39,10 +39,26 @@
             </div>
             <div class="buttons odsazeni"> <!-- Můžeme dávat více classu pro element -->
                 <!-- onclick je event (událost), která volá funkci z js a při kliknutí ji pouští -->
-                <button onclick="">Náhodný obrázek</button> <!-- Tlačítko -->
-                <button onclick="">Obrázek 1</button>
-                <button onclick="">Obrázek 2</button>
-                <button onclick="">Obrázek 3</button>
+                <button onclick="Random_img()">Náhodný obrázek</button> <!-- Tlačítko -->
+                <button onclick="obrazek1()">Obrázek 1</button>
+                <button onclick="obrazek2()">Obrázek 2</button>
+                <button onclick="obrazek3()">Obrázek 3</button>
+            </div>
+            <div class="odsazeni">
+                <h3>Seznam možností</h3>
+                <button onclick="vyber()">Zobraz možnosti</button>
+            </div>
+            <div class="odsazeni">
+                <p id="seznam"></p> <!-- Paragraf neboli odstavec -->
+            </div>
+            <div class="odsazeni">
+                <h3>Historie výběru</h3>
+            </div>
+            <div class="odsazeni">
+                <p id="vypis"></p>
+            </div>
+            <div class="odsazeni">
+                <button onclick="del()">Vymazat historii</button>
             </div>
         </div>
     </main>
